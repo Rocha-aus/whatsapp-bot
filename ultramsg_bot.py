@@ -19,6 +19,10 @@ from flask import Flask, request
 from flask_cors import CORS  # Import CORS
 
 app = Flask(__name__)
+@app.route("/")
+def home():
+    return "✅ WhatsApp Bot is Running!"
+
 CORS(app)  # Allow all requests
 CORS(app)  # Allow external requests
 
